@@ -25,3 +25,14 @@
 代币标准：ERC-20（同质化代币）， ERC-721（NFT）；
 
 DeFi组件：自动做市商（AMM），借贷协议逻辑。
+
+- 示例代码：
+
+Contract SimpleStorage {
+  uint public data;
+  function set (uint _data) {
+    data = _data
+  }
+}
+
+Solidity 需要编译为EVM 字节码运行，依赖 Remix 、 HardHat 等开发工具。
