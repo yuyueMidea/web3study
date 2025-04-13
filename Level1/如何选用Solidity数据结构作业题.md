@@ -108,3 +108,26 @@ struct Asset {
 mapping(address => Asset) public userAsset;        //用户地址-资产
 ```
 有以下优势：1、高效查询，O（1）访问任意资产；2、灵活扩展（支持动态添加代币、NFT类型）；3、节省Gas，仅存储非零余额，利用EnumerableSet 管理NFT ID。此方案平衡了存储成本、查询效率与可扩展性。
+
+- **使用enum定义状态时，应如何处理状态的转换逻辑？**
+
+在solidity中使用enum管理状态，应遵循以下规范：
+
+1、显式状态校验（通过require严格限制转换路径，避免非法跳转）举例：
+```
+enum State {Created, Active, Closed}
+State public state
+function activate() external{
+    require(state == State.Crated, "Invalid state!");
+    state = State.Active;        // 仅允许 Created → Active
+}
+```；
+
+2、集中化转换函数（封装状态修改逻辑，禁止直接赋值）；
+
+3、事件日志（记录状态变更，便于追踪）；
+
+4、使用状态机库（复杂场景使用OpenZeppelin的ConditionalEscrow 模版，避免重复造轮子）；
+
+总结关键原则是：禁止跨状态转换，结合modifier复用校验逻辑。
+
