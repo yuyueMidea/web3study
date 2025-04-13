@@ -16,11 +16,13 @@ uint（无符号整数）和int（有符号整数）；Solidity中数组长度�
 
 - **为何以及如何使用 `mapping` ？**
 
-Solidity 中的 `mapping` 是一种高效的键值存储结构，用于快速查找和减少内存开销；基本用法示例：```mapping(keyType => valueType) public myMap```, 常用键名类型有 address/uint/byte32， 值类型可以是任意的; 应用场景如 代币余额、权限管理、投票记录等高频键值查询。
+Solidity 中的 `mapping` 是一种高效的键值存储结构，用于快速查找和减少内存开销；基本用法示例：
+```mapping(keyType => valueType) public myMap```, 
+常用键名类型有 address/uint/byte32， 值类型可以是任意的; 应用场景如 代币余额、权限管理、投票记录等高频键值查询。
 
-- **struct 的用途及实例**
+- **`struct` 的用途及实例**
 
-struct 用于创建自定义的数据结构，将多个变量组合为逻辑单元，提升代码可读性和存储效率，
+`struct` 用于创建自定义的数据结构，将多个变量组合为逻辑单元，提升代码可读性和存储效率，
 ```
 struct Person {
     string name;
