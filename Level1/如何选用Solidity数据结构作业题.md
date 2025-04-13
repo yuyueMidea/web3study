@@ -96,3 +96,15 @@ Gas成本控制有以下：1、减少存储操作（临时变量用memory替代s
 
 `solidity`中`mapping`不支持直接迭代，因为其设计为键值对存储，仅支持`(1)`的单点查询；如果需要支持有以下解决方案：1、维护独立键数组（新建数组存放所有键理）；2、使用`OpenZeppelin`的 `EnumerableMap`（内置迭代方法、自动处理键管）；3.使用链下索引（通过事件日志记录键变更，前端或服务端构建索引数据库）。
 
+- **在设计一个包含多种资产类型的钱包合约时，应使用哪种数据结构？**
+
+在设计支持多种资产类型（ETH、ERC20、NFT）的钱包合约时，推荐采用`嵌套映射+结构体`的组合结构：
+```
+struct Asset {
+    uint256 ethBalance;
+    mapping(address => uint256) erc20Balance;        //代币地址-余额
+    mapping(address => EnumerableSet.UintSet) nfts;    //代币地址-NFT、ID集合
+}
+mapping(address => Asset) public userAsset;        //用户地址-资产
+```
+有以下优势：1、高效查询，O（1）访问任意资产；2、灵活扩展（支持动态添加代币、NFT类型）；3、节省Gas，仅存储非零余额，利用EnumerableSet 管理NFT ID。此方案平衡了存储成本、查询效率与可扩展性。
