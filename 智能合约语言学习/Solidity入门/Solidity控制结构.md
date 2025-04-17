@@ -55,5 +55,11 @@ function printOddNumbers() public {
     }
 }
 ```
-
-
+- **异常处理机制require**
+```
+function splitEther(address payable addr1, address payable addr2) public payable {
+    require(msg.value % 2 == 0, "Even value required."); _// 检查传入的ether是不是偶数_
+    addr1.transfer(msg.value / 2);
+    addr2.transfer(msg.value / 2);
+}
+```
