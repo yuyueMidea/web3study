@@ -44,5 +44,16 @@ function hasSpace(string memory input) public view returns (bool) {
     return result;
 }
 ```
+- **continue关键字**
+```
+function printOddNumbers() public {
+    for (uint i = 1; i <= 10; i++) {
+        if (i%2 == 0) { _// 如果是偶数，跳过本次循环_
+            continue;
+        }
+        console.log(i); _// 如果是奇数，就打印输出_
+    }
+}
+```
 
 
