@@ -55,7 +55,7 @@ function printOddNumbers() public {
     }
 }
 ```
-- **异常处理机制require**
+- **异常处理机制1、require**
 
 require函数在智能合约中主要用于验证函数执行前的的条件，确保合约状态的正确性，如果require的条件不满足，则函数将停止执行，并抛出异常，触发状态回滚。通常require被放置在函数的开始处，以便在进一步处理逻辑之前，首先确保所有基础条件都满足。
 
@@ -67,7 +67,7 @@ function splitEther(address payable addr1, address payable addr2) public payable
 }
 ```
 
-- **异常处理机制assert**
+- **异常处理机制2、assert**
 
 Solidity提供的assert函数让我们可以检查合约状态是否正常，否则抛出异常。
 ```
@@ -81,7 +81,7 @@ function splitEther(address payable addr1, address payable addr2) public payable
 ```
 在Solidity中，assert和require都用于检查异常情况，并在条件不满足时抛出异常；主要有以下区别：require通常用于验证外部输入、处理条件和确认合约的交互符合预期，如果require检查失败，会撤销所有修改并退换剩余的Gas； assert主要用于检查内部错误，assert应仅在确定有逻辑错误时使用，与require不同，assert失败将消耗所提供的Gas，并回滚所有修改。
 
-- **异常处理机制revert**
+- **异常处理机制3、revert**
 
 在Solidity中，revert和require都用于异常处理并撤销所有状态变化，revert的灵活性表现在它可以与if-else结合使用，提供比require更精细的控制逻辑，示例：
 ```
