@@ -28,7 +28,7 @@ function sumToN(uint16 n) public pure returns(uint16) {
     return sum;
 }
 ```
-do while 循环区别与 while循环的地方是，它的循环体至少执行一遍，示例：
+- **do while 循环区别与 while循环的地方是，它的循环体至少执行一遍**
 ```
 do {
     _// 循环体_
