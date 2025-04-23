@@ -59,7 +59,24 @@ const provider = new ethers.providers.JsonRpcProvider(
   "http://localhost:8545"
 );
 ```
+`Ganache`的主要功能有：
+- 开箱即用，快速启动一个EVM区块链网络（可以设置miner、出块时间）；
 
+- 方便的fork已经存在的区块链网络（无需等待区块同步）；
 
+- 使用`console.log`在Solidity开发中方便的调试；
 
+- 快进时间，模拟智能合约在未来时间的状态；
+
+- 模拟任何一个账户（你可以无需私钥模拟环境中使用任意用户的Token）。
+
+**了解 ganache 的主要功能和相关配置方法、参数。这其中包括：**
+
+Chain：设置网络的版本、ID、时间、合约大小限制；
+
+Database：设置保存链到数据库；
+
+Logging：设置EVM opcodes、RPC请求和响应的log；
+
+Miner：设置矿工，包括出块的时间、默认的gas price、难度；
 
