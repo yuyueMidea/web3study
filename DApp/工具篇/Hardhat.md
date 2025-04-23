@@ -1,0 +1,1 @@
+Hardhat 是以太坊最流行的开发环境，它可以帮你编译和部署智能合约，并且提供了Hardhat Network支持本地测试和运行Solidity。
