@@ -43,13 +43,13 @@ Bitcoin作为最早的区块链网络，其去中心化应用（DApp）的生态
 ## 开发考量因素
 
 平台选型参考
-``
+```
 需求	    推荐平台	        原因
 高频交易	  Solana	        高TPS低费用
 跨链互操作	Polkadot/Cosmos	原生跨链设计
 隐私保护	  Secret Network	默认加密状态
 比特币生态	Stacks	        直接继承BTC安全性
-``
+```
 
 ## 新兴平台与趋势
 
@@ -65,7 +65,8 @@ Bitcoin作为最早的区块链网络，其去中心化应用（DApp）的生态
 
 2、多链开发框架:
 ```
-# 使用Hardhat多链配置npm install @nomiclabs/hardhat-ethers @nomiclabs/hardhat-waffle
+# 使用Hardhat多链配置
+npm install @nomiclabs/hardhat-ethers @nomiclabs/hardhat-waffle
 ```
 3、链抽象趋势：（1）使用账户抽象钱包、（2）集成`Particle Network`中间件。
 
