@@ -80,3 +80,9 @@ Logging：设置EVM opcodes、RPC请求和响应的log；
 
 Miner：设置矿工，包括出块的时间、默认的gas price、难度；
 
+Wallet：设置钱包的默认余额、解锁钱包；
+
+Fork：分叉网络的设置包括：fork目标网络的RPC URL、块高、userAgent、缓存策略，支持提供用户名、密码；
+
+Server：设置本地Chain的监听地址&端口。
+
