@@ -10,7 +10,7 @@
 
 **Alchemy 和 Infura 的区别**
 
-**技术架构对比**
+**一、技术架构对比**
 
 | 维度	      | Alchemy	                  | Infura
 |-------------|---------------------------|-----------
@@ -36,12 +36,16 @@ web3.eth.getPastLogs({
 })
 ```
 
-**实时监控能力对比**
+**2、实时监控能力对比**
 | 功能	     | Alchemy	                | Infura
 |------------|--------------------------|---------
 | 交易状态推送| Webhook + Websocket双通道	| 仅Webhook
 | 地址监控数量| 无上限	                  | 免费版限100个地址
 | 事件过滤	   | 支持复杂条件组合	        | 基础主题过滤
+
+**3、开发工具的差别**
+
+1、Alchemy专属：Mempool可视化工具、合约调试器、Gas优化建议引擎； 2、Infura特色：IPFS pinning服务、Filecoin归档支持、以太坊2.0 Beacon链API。
 
 **三、性能指标对比**
 
@@ -52,5 +56,41 @@ web3.eth.getPastLogs({
 | 历史数据查询深度	  | 全归档(创世块起)	| 免费版限3个月
 | 并发连接数	        | 无硬性限制	      | 免费版限100连接/秒
 
+**四、典型使用场景**
 
-开发工具的差别：1、Alchemy专属：Mempool可视化工具、合约调试器、Gas优化建议引擎； 2、Infura特色：IPFS pinning服务、Filecoin归档支持、以太坊2.0 Beacon链API。
+推荐使用Alchemy的场景：1、高频交易DEX->需要实时Mempool数据；2、NFT批量铸造->依赖增强NFT API；3、复杂DeFi协议->需要交易模拟；
+
+推荐使用Infura的场景：1、多链兼容应用->需要统一接入点；2、IPFS集成项目->文件存储需求；3、企业合规需求->Consensys生态认证。
+
+**五、开发者体验差异**
+
+1、SDK对比：
+```
+// Alchemy SDK（功能集成度高）
+import { Alchemy } from 'alchemy-sdk';
+const alchemy = new Alchemy({
+  apiKey: "key",
+  network: Network.ETH_MAINNET 
+});
+
+// Infura（更接近原生Web3）
+import Web3 from 'web3';
+const web3 = new Web3(
+  new Web3.providers.HttpProvider(
+    `https://mainnet.infura.io/v3/key`
+  )
+);
+```
+2、错误处理：（1）Alchemy 有错误重试机制、错误分类系统、实时速率限制提示；（2）Infura 有 标准HTTP错误码、基础速率限制提醒。
+
+**六、企业级服务对比**
+| 服务等级	| Alchemy企业版	| Infura企业版
+|---------|-----------------|-------------
+| 私有节点	| 专属物理服务器	| 虚拟私有节点
+| SLA保证	| 99.99%	| 99.9%
+| 合规认证	| SOC2 Type2	| ISO27001
+| 数据出口	| AWS/GCP/Azure	| 仅AWS
+| 定制开发	| 专属工程师支持	| 优先工单响应
+
+
+
