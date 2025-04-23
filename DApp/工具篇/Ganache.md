@@ -1,10 +1,11 @@
-**`Ganache`深度解析：本地区块链开发利器**
+## `Ganache`深度解析：本地区块链开发利器
 
 `Ganache` 是由 `ConsenSys` 开发的个人区块链工具，为以太坊开发者提供本地化的测试环境，常被称为“区块链模拟器”。
 
 核心特性概览：交易调试、日志记录、合约交互、状态快照、预配置账户、区块生成控制。
 
-版本分为 `Ganache CLI`（命名行）、`Ganache UI`（图形界面）；
+版本分为 `Ganache CLI`（命名行）、`Ganache UI`（图形界面）。
+
 安装方法
 ```
 # 全局安装CLI版本
@@ -13,7 +14,7 @@ npm install -g ganache
 # 或通过Docker使用
 docker run -d -p 8545:8545 trufflesuite/ganache
 ```
-核心功能详解：
+**核心功能详解**
 
 1、账户与钱包
 ```
