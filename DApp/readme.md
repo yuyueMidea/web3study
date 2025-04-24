@@ -6,4 +6,12 @@
 
 **DApp开发工具**
 
-介绍DApp开发中常用的工具：
+介绍DApp开发中常用的工具：如Infura、Ganache、Alchemy、Hardhat。学习这些工具的安装、配置和基本用法。
+
+**DApp常用技术栈**
+
+学习构建DApp的常用技术栈，包括： Ethers.js、React、Wagmi等技术。
+
+**其他生态DApp开发**
+
+探讨除以太坊之外的其他区块链平台，如BTC、polkdot等在DApp开发中的应用，了解这些平台的发展。
