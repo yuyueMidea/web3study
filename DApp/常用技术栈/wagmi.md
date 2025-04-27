@@ -16,3 +16,17 @@
 | 发送交易	| 执行合约调用、代币转账等。	| useContractWrite, useSendTransaction
 | 监听事件	| 实时监听合约事件或链上状态变化。	| useWatchContractEvent
 | 多链切换	| 动态切换网络（如从以太坊转到 Polygon）。	| useNetwork, useSwitchNetwork
+
+**有以下技术优势**
+- 零配置起步：默认连接以太坊主网，无需复杂配置；
+- 轻量级：仅依赖ehters.js 和viem， 无冗余代码；
+- 高性能：自动缓存请求数据，减少重复RPC调用。
+
+
+**Wagmi与其他库的对比**
+| 特性	| Wagmi	| Web3.js	| Ethers.js
+|-------|-------|---------|---------
+| 设计理念	| React Hooks 优先	| 通用 JavaScript API	| 通用 JavaScript API
+| 类型支持	| 内置 TypeScript	| 需额外类型定义	| 部分支持
+| 链切换	| 原生多链支持	| 需手动切换 Provider	| 需手动切换 Provider
+| 包体积	| 更小（按需导入 Hooks）	| 较大	| 中等
