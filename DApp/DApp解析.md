@@ -42,10 +42,34 @@ contract MyToken {
     }
 }
 ```
+- 3、前端集成：使用`web3.js` 或 `Ethers.js`连接钱包；
+```
+import { ethers } from "ethers";
 
+const provider = new ethers.providers.Web3Provider(window.ethereum);
+const signer = provider.getSigner();
+const contract = new ethers.Contract(contractAddress, abi, signer);
+```
+- 4、在测试网部署合约;
+```
+npx hardhat run scripts/deploy.js --network goerli
+```
+- 5、去中心化前端托管，部署到IPFS或FLeek；
+```
+ipfs add -r dist/
+```
+**DApp的优缺点**
+- 优势：
+- 抗审查：无中心化机构可关闭应用；
+- 透明可信：所有代码和交易链上可查；
+- 用户主权：用户掌握资产（私钥即所有权）；
+- 挑战：
+- 性能瓶颈：
+- 区块链吞吐量限制（如以太坊15~30TPS）；
+- 用户体验复杂：需管理私钥、支付Gas费；
+- 监管不确定性：合规性风险（如证券化代币）；
 
-
-三层核心架构：
+**三层核心架构**
 
 1、前端层（React、vue等传统web技术，特殊组件是 钱包集成（如Metamask），区块链交互库（如ethers.js））；
 
@@ -83,11 +107,14 @@ contract MyToken {
 | 审计透明度	    | 私有代码	                | 完全开源可验证
 
 **DApp类型与案例**
+- 1、金融类（DeFi）:uniswap：去中心化交易所;Aave： 借贷协议； 特点：自动做市商（AMM），闪电贷。
+- 2、游戏类（GameFi）：Axie Infinity（宠物战斗游戏），特点：NFT资产，Play-to-Earn。
+- 3、社交类（SocialFi）：Lens Protocal（去中心化社交图谱）；特点：用户数据主权、内容代币化；
+- 4、基础设施类：chainlink（去中心化预言机）。
 
-1、金融类（DeFi）:uniswap：去中心化交易所;Aave： 借贷协议； 特点：自动做市商（AMM），闪电贷。
 
-2、游戏类（GameFi）：Axie Infinity（宠物战斗游戏），特点：NFT资产，Play-to-Earn。
-
-3、社交类（SocialFi）：Lens Protocal（去中心化社交图谱）；特点：用户数据主权、内容代币化；
-
-4、基础设施类：chainlink（去中心化预言机）。
+**未来发展趋势**
+- Layer2扩容：采用Optimism、Arbitrum 等方案降低Gas费；
+- 跨链互操作：通过Polkadot、Cosmos实现多链互通；
+- 账户抽象（AA）：改善用户体验（如免助记词钱包）；
+- 零知识证明（ZK）：增强隐私包含（如zkSync）。
