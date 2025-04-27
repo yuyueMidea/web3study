@@ -27,6 +27,24 @@
 - 测试网：Ethereum Goerli、Polygon Mumbai。
 - IDE：Remix、VS Code + 插件。
 
+**DApp开发流程**
+- 1、需求分析与设计：确定应用场景（如DeFi、NFT、GameFi）；设计通证经济模型（代币分配、激励机制）；
+- 2、智能合约开发：
+```
+// 示例：以太坊简易代币合约
+pragma solidity ^0.8.0;
+
+contract MyToken {
+    mapping(address => uint256) public balances;
+    
+    function mint(address to, uint256 amount) public {
+        balances[to] += amount;
+    }
+}
+```
+
+
+
 三层核心架构：
 
 1、前端层（React、vue等传统web技术，特殊组件是 钱包集成（如Metamask），区块链交互库（如ethers.js））；
