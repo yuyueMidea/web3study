@@ -20,6 +20,13 @@
 - 4、区块链网络：底层基础设施（如Ethereum、Solana、BNB chain）；
 - 5、钱包集成：用户身份认证和交易签名。
 
+**典型技术栈**
+- 开发语言：Solidity（以太坊）、Rust（Solana）、Move（Aptos、Sui）；
+- 工具链：
+- 开发框架有：Hardhat、Truffle、Anchor（Solana）；
+- 测试网：Ethereum Goerli、Polygon Mumbai。
+- IDE：Remix、VS Code + 插件。
+
 三层核心架构：
 
 1、前端层（React、vue等传统web技术，特殊组件是 钱包集成（如Metamask），区块链交互库（如ethers.js））；
