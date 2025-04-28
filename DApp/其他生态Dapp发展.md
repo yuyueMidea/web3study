@@ -13,7 +13,7 @@
 - IOT链（Helium、IOTA）；
 - **监管适应**：部分链专注合规（Hedera、Algorand）。
 
-**主流区块链生态对比**
+**主流区块链DApp生态对比**
 | 区块链	| 代表 DApp	| 优势领域	| 活跃开发者占比
 |-------|-----------|---------|------
 | Ethereum	| Uniswap、Aave	| DeFi、NFT	| 35%
