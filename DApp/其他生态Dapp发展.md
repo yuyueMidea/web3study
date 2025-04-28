@@ -2,6 +2,26 @@
 
 区块链世界远不止以太坊一家，各主流平台在DApp开发中展现出独特的技术特性和应用场景；接下来深入探讨比特币、Polkadot 等主要区块链平台在DApp领域的应用现状与发展趋势。
 
+**多元区块链崛起的背景**
+
+随着区块链技术的分化发展，单一链的局限性（如性能瓶颈、功能侧重不同）催生了多链并生的格局：
+- **性能需求**：以太坊主网TPS有限，催生Layer2（Arbitrum、Optimism）和高性能链（Solana、Aptos）；
+- **功能分化：**
+- 智能合约平台（Ethereum、BNB Chain）；
+- 隐私链（Menero、Zcash）；
+- 存储链（Filecoin、Arweave）；
+- IOT链（Helium、IOTA）；
+- **监管适应**：部分链专注合规（Hedera、Algorand）。
+
+**主流区块链生态对比**
+| 区块链	| 代表 DApp	| 优势领域	| 活跃开发者占比
+|-------|-----------|---------|------
+| Ethereum	| Uniswap、Aave	| DeFi、NFT	| 35%
+| BNB Chain	| PancakeSwap、StepN	| 低 Gas 交易	| 25%
+| Solana	| Raydium、Magic Eden	| 高频交易	| 15%
+| Polygon	| QuickSwap、Aavegotchi	| 游戏/社交	| 12%
+| Avalanche	| Trader Joe、Benqi	| 机构 DeFi	| 8%
+
 **Bitcoin DApp发展**
 
 一、技术演进路线：
