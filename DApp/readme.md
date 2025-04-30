@@ -10,7 +10,7 @@
 
 **DApp常用技术栈**
 
-学习构建DApp的常用技术栈，包括： Ethers.js、React、Wagmi等技术。
+学习构建DApp的常用技术栈，包括： Ethers.js、React、RainbowKit、Wagmi等技术。
 
 **其他生态DApp开发**
 
