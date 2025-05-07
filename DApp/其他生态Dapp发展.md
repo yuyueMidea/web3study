@@ -24,12 +24,12 @@
 
 **典型跨链DApp案例**
 - **1、跨链DeFi协议（Osmosis）**
-- 技术栈，Cosmos SDK + IBC；
-- 功能：用户可在Atom、OSMO、JUNO 等链间无缝兑换资产；
+   - 技术栈，Cosmos SDK + IBC；
+   - 功能：用户可在Atom、OSMO、JUNO 等链间无缝兑换资产；
 - **全链游戏（Illuvium）**
-- 架构：资产在Ethereum（DeFi），游戏逻辑在Immutable X（Layer2），支付在Polygon；
+   - 架构：资产在Ethereum（DeFi），游戏逻辑在Immutable X（Layer2），支付在Polygon；
 - **3、跨链社交（Lens Protocol）**
-- 多链策略：个人资料存于Polygon、内容存储于Arweave、支付支持ETH、MATIC；
+   - 多链策略：个人资料存于Polygon、内容存储于Arweave、支付支持ETH、MATIC；
 
 **未来发展趋势**
 - 1、技术演进：Rollup即服务（DApp可一键部署专属链，如 Caldera、AltLayer），零知识证明跨链：zkBridge（StarkEx）实现低成本验证；
