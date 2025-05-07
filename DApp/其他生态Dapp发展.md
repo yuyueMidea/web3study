@@ -7,10 +7,10 @@
 随着区块链技术的分化发展，单一链的局限性（如性能瓶颈、功能侧重不同）催生了多链并生的格局：
 - **性能需求**：以太坊主网TPS有限，催生Layer2（Arbitrum、Optimism）和高性能链（Solana、Aptos）；
 - **功能分化：**
-- 智能合约平台（Ethereum、BNB Chain）；
-- 隐私链（Menero、Zcash）；
-- 存储链（Filecoin、Arweave）；
-- IOT链（Helium、IOTA）；
+   - 智能合约平台（Ethereum、BNB Chain）；
+   - 隐私链（Menero、Zcash）；
+   - 存储链（Filecoin、Arweave）；
+   - IOT链（Helium、IOTA）；
 - **监管适应**：部分链专注合规（Hedera、Algorand）。
 
 **主流区块链DApp生态对比**
