@@ -22,7 +22,7 @@
 
 **典型技术栈**
 - 开发语言：Solidity（以太坊）、Rust（Solana）、Move（Aptos、Sui）；
-- 工具链：
+- 工具链：Ganache → 本地以太坊测试链，调试快、 Hardhat Network → 内置的本地区块链模拟器；
 - 开发框架有：Hardhat、Truffle、Anchor（Solana）；
 - 测试网：Ethereum Goerli、Polygon Mumbai。
 - IDE：Remix、VS Code + 插件。
