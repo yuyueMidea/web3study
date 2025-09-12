@@ -9,3 +9,8 @@
 - create2 新合约地址，由部署者地址 + salt + 合约字节码 确定，可以在部署前预测地址；
 - 因此 create2用于合约地址预计算、可升级代理模式、钱包工厂 等场景，而create更简单，适合普通部署。
 - 总结 create不可预测，create2可预测，且更灵活。
+
+3、ether中gwei wei换算关系
+- 1 ether = 10^18 wei
+- 1 gwei = 10^9 wei
+- 1 ether = 10^9 gwei
