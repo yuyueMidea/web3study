@@ -14,3 +14,4 @@
 - 1 ether = 10^18 wei
 - 1 gwei = 10^9 wei
 - 1 ether = 10^9 gwei
+- wei 是最小单位；gwei 常用于表示 Gas 价格，方便阅读；ether 主要用于转账和展示余额。
